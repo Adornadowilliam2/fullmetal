@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url(title.gif);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 3pc;
+    }
+
+    h1{
+        color: white;
+        text-shadow: 0 0 10px black;
+        font-family: "Big Shoulders Stencil Text", sans-serif;
+    }
+
+    h1:after{
+        content:"InfiniteGlimmer";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 20px;
+    }
+  </style>
+
+  <title>Fullmetal</title>
+</head>
+<body>
+
+     <h1>Fullmetal Alchemist</h1>
+     <audio src="Fullmetal Alchemist_ Brotherhood - Opening 2 _4K 60FPS _ Creditless _ CC_.mp3" controls></audio>
+  <script>
+    var gifUrls = [
+    { url: 'title.gif', duration: 13300 },
+    { url: 'rain.gif', duration: 2500 },
+    { url: 'may.gif', duration: 2000 },
+    { url: 'ling.gif', duration: 3200 },
+    { url: 'intromustang.gif', duration: 2900 },
+    { url: 'honheim.gif', duration: 2500 },
+    { url: 'god.gif', duration: 1300 },
+    { url: 'scar.gif', duration: 2500 },
+    { url: 'bradley.gif', duration: 1000 },
+    { url: 'fight.gif', duration: 4800 },
+      { url: 'mustang.gif', duration: 3000 },
+      { url: 'battle.gif', duration: 2500 },
+      { url: 'sekai.gif', duration: 5000 },
+      { url: 'dont.gif', duration: 5100 }
+    ];
+
+    var currentIndex = 0;
+
+    function changeBackgroundImage() {
+      var currentGif = gifUrls[currentIndex];
+      document.body.style.backgroundImage = 'url(' + currentGif.url + ')';
+      currentIndex = (currentIndex + 1) % gifUrls.length;
+      setTimeout(changeBackgroundImage, currentGif.duration);
+    }
+
+    changeBackgroundImage();
+  </script>
+</body>
+</html>
